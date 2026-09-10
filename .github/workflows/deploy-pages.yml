@@ -19,20 +19,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout labkit
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           path: labkit
 
       # labkit's package.json uses file:../weasel dependencies, so weasel
       # must sit next to labkit in the workspace
       - name: Checkout weasel
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           repository: orochi235/weasel
           path: weasel
 
       - name: Setup Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 22
 
